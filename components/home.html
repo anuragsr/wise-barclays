@@ -1,0 +1,235 @@
+  <car-header></car-header>
+  <div class="slide home-page">
+    <div class="content">
+      <h1>Welcome to Wise Barclay, the home of quality used/new cars!</h1><br/>
+      <hr style="border: 1px solid #eaea06; width:25%; margin:0 auto;"/>
+      <br/>
+      <div class="home-content-container">
+          <div class="input-container">
+            <select class="input-select input-select-first">
+              <option value="would_like">Make</option>
+              <option value="do_research">Aston Martin (15)</option>
+              <option value="get_quote">Audi(651)</option>
+              <option value="check_elig">BMW (24)</option>
+              <option value="create_app">Chevrolet (22)</option>
+              <option value="talk_to_us">Chrysler (45)</option>
+              <option value="talk_to_us">Citroen (48)</option>
+              <option value="talk_to_us">Chrysler (45)</option>
+            </select>
+          </div>
+          <div class="input-container">
+            <select name="huge" class="input-select">
+              <option value="0">Model</option>
+              <option value="home_loan">All</option>
+            </select>
+          </div>
+          <div class="input-container">
+            <select name="huge" class="input-select">
+              <option value="0">Min. Budget (£)</option>
+              <option value="home_loan">500</option>
+              <option value="car_loan">1000</option>
+              <option value="used_car_loan">2000</option>
+              <option value="personal_loan">5000</option>
+            </select>
+          </div>
+          <div class="input-container">
+            <select name="huge" class="input-select">
+              <option value="0">Max. Budget (£)</option>
+              <option value="home_loan">1500</option>
+              <option value="car_loan">10000</option>
+              <option value="used_car_loan">20000</option>
+              <option value="personal_loan">50000</option>
+            </select>
+          </div>
+          <div class="input-container">
+            <button class="search-btn" >Search</button>
+          </div>
+      </div>
+    </div>
+    <div class="home-footer">
+      View Our Cars<br/><br/>
+      <button ng-click="scrollDown(1)" class="scroll-down-btn"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
+    </div>
+  </div>
+  <div class="slide testimonials">
+    <div class="content">
+      <br/>
+      <h1 class="title">Our Cars</h1>
+      <br/>
+      <hr style="width:25%; margin:0 auto; border:1px solid #eaea06;"/>
+      <br/>
+      	<div class="content-text">
+	        <br/>
+	        <div class="cars-container">
+        	  <div data-toggle="modal" data-target="#productModal" ng-click="showCar(car)" ng-repeat="car in carsToShow track by $index" class="car-item-contain">
+	        		<div class="car-item" ng-mouseover="showCarDetails($event)" ng-mouseout="hideCarDetails($event)" style="background:url({{car.imgUrl}}); background-position: 20% 20%;">
+	        		</div>
+	        		<div class="car-info up">
+	        			<img src="img/logo-single.png" height="20"/>
+	        			{{car.name}}
+	        		</div>
+	        		<div class="car-info down">
+	        			Mileage : {{car.mileage}} | Reg. Yr : {{car.regYear}}
+	        		</div>
+	        	</div>
+        	</div>
+    	</div>
+  	</div>
+  	<div class="home-footer">
+      Contact Us<br/><br/>
+      <button ng-click="scrollDown(2)" class="scroll-down-btn"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
+    </div>
+  </div>
+<div class="modal fade" id="productModal" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">{{car.name}}</h4>
+        </div>
+        <div class="modal-body col-lg-12">
+          <ul class="col-sm-6" etalage-angular id="etalage"></ul>  
+          <div class="col-sm-6 text-center">
+            <h1>{{car.name}}</h1>
+            <img ng-src="{{car.imgUrl}}">
+            <h2>£ {{car.price}}</h2>
+            <hr/>
+            <div class="car-content col-md-12">
+              <div class="col-md-6">
+                <div class="car-det-item">
+                  <h2>Year/Reg</h2>
+                  <h3>{{car.regYear}}</h3>
+                </div>
+                <div class="car-det-item">
+                  <h2>Mileage</h2>
+                  <h3>{{car.mileage}} Km</h3>
+                </div>
+                <div class="car-det-item">
+                  <h2>Engine Size</h2>
+                  <h3>{{car.engineSize}}</h3>
+                </div>
+                <div class="car-det-item">
+                  <h2>Fuel Type</h2>
+                  <h3>{{car.fuelType}}</h3>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="car-det-item">
+                  <h2>Gear Box</h2>
+                  <h3>{{car.gearBox}}</h3>
+                </div>
+                <div class="car-det-item">
+                  <h2>Body Style</h2>
+                  <h3>{{car.bodyStyle}}</h3>
+                </div>
+                <div class="car-det-item">
+                  <h2>Color</h2>
+                  <h3>{{car.colour}}</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <div class="slide contact-us">
+      <br/>
+      <h1>Contact Us</h1>
+      <br/>
+      <hr style="width:25%; margin:0 auto; border:1px solid #eaea06;"/>
+      <br/>
+          <div class="col-lg-12 container">
+            <div class="col-lg-1">
+            </div>
+            <div class="col-lg-10 row row-centered">
+              <div class="col-md-2 col-centered">
+              </div>
+                <div class="col-md-8 col-centered">
+                  <div class="col-md-6 go-left">
+                    Contact Us<br/>
+                    <h4>
+                      01322 226766<br/>
+                      07813 988983<br/>
+                      <br/>
+                      <a class="btn btn-default" href="#">
+                        www.wise-barclays.net
+                      </a>  
+                    </h4>
+                  </div>
+                  <div class="col-md-6 go-left">
+                      Address<br/>
+                      <h4>
+                        Wise Barclay Car Care Ltd.<br/> 
+                        Tel No : 1800-009-988<br/>
+                        9th Street, Old Trafford, UK<br/><br/>
+                      </h4>
+                  </div>
+                </div>
+              <div class="col-xs-2 col-centered">
+              </div>
+            </div>
+            <div class="col-lg-1">
+            </div>
+          </div>
+          <div class="col-lg-12 container">
+            <div class="col-lg-1">
+            </div>
+            <div class="col-lg-10 row row-centered">
+              <div class="col-xs-2 col-centered">
+              </div>
+              <div class="col-xs-8 col-centered">
+                <h3>Enter your pincode and get directions to our store</h3>
+                <input class="input-sm" type="text" placeholder="Pincode"/>
+                <button class="btn btn-sm btn-primary">Go</button>
+              </div>
+              <div class="col-xs-2 col-centered">
+              </div>
+            </div>
+            <div class="col-lg-1">
+            </div>
+          </div>
+          <div class="col-lg-12 map-contain container">
+            <div class="col-lg-1">
+            </div>
+            <div class="col-lg-10 row row-centered">
+              <div class="col-xs-2 col-centered">
+              </div>
+              <div class="col-xs-8 col-centered">
+                <div class="map-loc"></div>
+              </div>
+              <div class="col-xs-2 col-centered">
+              </div>
+            </div>
+            <div class="col-lg-1">
+            </div>
+          </div>
+    <div class="home-footer">
+	      <span style="color:white;">Follow Us</span>
+        <br/><br/>
+	      <button ng-click="scrollDown(2.8)" class="scroll-down-btn"><i class="fa fa-angle-down" aria-hidden="true"></i></button>
+	    </div>
+	</div>
+  <div class="slide footer-area">
+    <div class="content">
+     	<h4 class="title">Follow Us</h4>
+        <a target="_blank" class="contact-link" href="#" ><i class="fa fa-twitter" aria-hidden="true"></i></a>
+        <a target="_blank" class="contact-link" href="#" ><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+        <a target="_blank" class="contact-link" href="#" ><i class="fa fa-facebook" aria-hidden="true"></i></a>
+        <a target="_blank" class="contact-link" href="#" ><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+        <a target="_blank" class="contact-link" href="#" ><i class="fa fa-instagram" aria-hidden="true"></i></a>
+    </div>
+    <div class="home-footer">
+      Back to Top<br/><br/>
+      <button ng-click="scrollDown(0)" class="scroll-down-btn">
+        <i class="fa fa-angle-up" aria-hidden="true"></i>
+      </button>
+    </div>
+  </div>

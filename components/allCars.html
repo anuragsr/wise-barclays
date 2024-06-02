@@ -1,0 +1,142 @@
+ <car-header></car-header>
+ <div class="slide testimonials all-cars">
+  <br/>
+  <h1 class="title">Our Cars</h1>
+	<hr style="width:25%; margin:0 auto; border:1px solid #eaea06;"/>
+	<br/>	
+  	<div class="content-text">
+        <br/>
+        <div class="col-lg-12 container">
+        	<div class="col-lg-1">
+        	</div>
+        	<div class="col-lg-10 row row-centered">
+        		<div class="input-container">
+		            <select class="input-select input-select-first">
+		              <option value="would_like">Make</option>
+		              <option value="do_research">Aston Martin (15)</option>
+		              <option value="get_quote">Audi(651)</option>
+		              <option value="check_elig">BMW (24)</option>
+		              <option value="create_app">Chevrolet (22)</option>
+		              <option value="talk_to_us">Chrysler (45)</option>
+		              <option value="talk_to_us">Citroen (48)</option>
+		              <option value="talk_to_us">Chrysler (45)</option>
+		            </select>
+		          </div>
+		          <div class="input-container">
+		            <select name="huge" class="input-select">
+		              <option value="0">Model</option>
+		              <option value="home_loan">All</option>
+		            </select>
+		          </div>
+		          <div class="input-container">
+		            <select name="huge" class="input-select">
+		              <option value="0">Min. Budget (£)</option>
+		              <option value="home_loan">500</option>
+		              <option value="car_loan">1000</option>
+		              <option value="used_car_loan">2000</option>
+		              <option value="personal_loan">5000</option>
+		            </select>
+		          </div>
+		          <div class="input-container">
+		            <select name="huge" class="input-select">
+		              <option value="0">Max. Budget (£)</option>
+		              <option value="home_loan">1500</option>
+		              <option value="car_loan">10000</option>
+		              <option value="used_car_loan">20000</option>
+		              <option value="personal_loan">50000</option>
+		            </select>
+		          </div>
+		          <div class="input-container">
+		            <button class="search-btn" >Search</button>
+		          </div>
+        	</div>
+        	<div class="col-lg-1">
+        	</div>
+        </div>
+        <div class="col-lg-12 container">
+        	<div class="col-lg-1">
+        	</div>
+        	<div class="col-lg-10 row row-centered">
+        		<h3>Showing 463 of 659 Cars</h3>
+        	</div>
+        	<div class="col-lg-1">
+        	</div>
+        </div>
+        <div class="col-lg-12 container">
+        	<div class="col-lg-1">
+        	</div>
+        	<div class="col-lg-10 row row-centered">
+        		<div class="col-lg-3 car-boot-contain col-centered" ng-repeat="car in cars track by $index" data-toggle="modal" data-target="#productModal" ng-click="showCar(car)">
+        			<div class="car-item" ng-mouseover="showCarDetails($event)" ng-mouseout="hideCarDetails($event)" style="background:url({{car.imgUrl}}); background-position: 20% 20%;">
+	        		</div>
+	        		<div class="car-curtain">
+	        			{{car.name}}
+	        		</div>
+        		</div>
+        	</div>
+        	<div class="col-lg-1">
+        	</div>
+        </div>
+	</div>
+</div>
+  <div class="modal fade" id="productModal" role="dialog">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">{{car.name}}</h4>
+        </div>
+        <div class="modal-body">
+          <div class="col-md-5">
+            <ul etalage-angular id="etalage"></ul>  
+          </div>
+          <div class="col-md-7">
+            <h1>{{car.name}}</h1>
+            <img ng-src="{{car.imgUrl}}">
+            <h2>£ {{car.price}}</h2>
+            <hr/>
+            <div class="car-content col-md-12">
+              <div class="col-md-6">
+                <div class="car-det-item">
+                  <h2>Year/Reg</h2>
+                  <h3>{{car.regYear}}</h3>
+                </div>
+                <div class="car-det-item">
+                  <h2>Mileage</h2>
+                  <h3>{{car.mileage}} Km</h3>
+                </div>
+                <div class="car-det-item">
+                  <h2>Engine Size</h2>
+                  <h3>{{car.engineSize}}</h3>
+                </div>
+                <div class="car-det-item">
+                  <h2>Fuel Type</h2>
+                  <h3>{{car.fuelType}}</h3>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="car-det-item">
+                  <h2>Gear Box</h2>
+                  <h3>{{car.gearBox}}</h3>
+                </div>
+                <div class="car-det-item">
+                  <h2>Body Style</h2>
+                  <h3>{{car.bodyStyle}}</h3>
+                </div>
+                <div class="car-det-item">
+                  <h2>Color</h2>
+                  <h3>{{car.colour}}</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="clearfix"></div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

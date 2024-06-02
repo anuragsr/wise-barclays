@@ -1,0 +1,58 @@
+/*
+@font-face {
+    font-family: 'Merriweather';
+    src: url('../font/Merriweather-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../font/Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+*/
+.header{		
+	top:0;
+}
+
+.footer{
+    width: 99.1%;
+    overflow-x:hidden; 
+}
+.clearfix:before,
+.clearfix:after {
+  	content:"";
+  	display:table;
+}
+.clearfix:after {
+  	clear:both;
+}
+.clearfix {
+	zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
+.pull-left{
+  width: 100%;
+}
+.pull-left, .pull-right{
+	float:left;
+}
+.pull-right{
+  cursor: pointer;
+  font-size: 26px;
+	text-align: left;
+	margin-left: -50px;
+	float:right;
+	margin-top: -45px;
+  width: 5%;
+  color: white;
+}
+.footer .pull-right{
+	margin-top: 25px;
+}
+.links a{
+	text-transform: uppercase;
+	text-decoration: none;
+	color: black;
+	margin: 5px;
+}

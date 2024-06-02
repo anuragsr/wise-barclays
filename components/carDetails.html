@@ -1,0 +1,59 @@
+<div class="slide car-detail">
+	<div class="content car-content">
+		<h1 class="title">
+			{{car.name}}
+		</h1>
+		<hr style="width:25%; margin:0 auto; border:1px solid #eaea06;"/>
+		<br/>		
+		<div class="car-detail-container">
+			<div class="car-detail-box">
+				<div class="doc-list-wrapper" data-docs="docs"></div>
+			</div>
+			<div class="spec-box car-detail-box">
+				<h1>Price: £ {{car.price}}</h1>
+				<div class="clearfix">
+					<div class="car-left">
+						<div class="car-det-item">
+							<h2>Year/Reg</h2>
+							<h3>{{car.regYear}}</h3>
+						</div>
+						<div class="car-det-item">
+							<h2>Mileage</h2>
+							<h3>{{car.mileage}}</h3>
+						</div>
+						<div class="car-det-item">
+							<h2>Engine Size</h2>
+							<h3>{{car.engineSize}}</h3>
+						</div>
+						<div class="car-det-item">
+							<h2>Fuel Type</h2>
+							<h3>{{car.fuelType}}</h3>
+						</div>
+					</div>
+					<div class="car-right">
+						<div class="car-det-item">
+							<h2>Gear Box</h2>
+							<h3>{{car.gearBox}}</h3>
+						</div>
+						<div class="car-det-item">
+							<h2>Body Style</h2>
+							<h3>{{car.bodyStyle}}</h3>
+						</div>
+						<div class="car-det-item">
+							<h2>Color</h2>
+							<h3>{{car.colour}}</h3>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<h1 class="title">
+			About the Vehicle
+		</h1>
+		<hr style="width:25%; margin:0 auto; border:1px solid #eaea06;"/>
+		<br/>
+		<div class="car-desc">
+			{{car.description}}
+		</div>
+	</div>
+</div>
